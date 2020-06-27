@@ -68,5 +68,16 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
      * Par convention, leurs noms devraient débuter par "test".
      * Vous pouvez ébaucher le corps grâce au menu contextuel "Enregistrer une méthode de test".
      */
+    public void test_main() {
+        boolean thrown = false;
+        
+        String [] args = {"0","ZZZ","77"};
+        try {
+            question1.FahrenheitCelsius.main(args);
+        } catch (NumberFormatException e) {
+            thrown = true;
+        }
 
+        assertTrue(thrown);
+    }
 }
